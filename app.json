@@ -11,7 +11,7 @@
     ],
     "repository": "https://github.com/CoderXKrishna/Arank",
     "website": "https://Arank.tech",
-    "success_url": "https://t.me/TeamArank",
+    "success_url": "https://t.me/CoderXKrishna",
     "stack": "container",
     "env": {
         "API_ID": {
