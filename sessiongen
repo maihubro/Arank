@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Arank - UserBot
+# Copyright (C) 2021-2023 TeamArank
+#
+# This file is a part of < https://github.com/CoderXKrishna/Arank/ >
+# PLease read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
+
+bash resources/session/session.sh
