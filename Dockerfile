@@ -1,11 +1,20 @@
-FROM python3.9
+# Arank - UserBot
+# Copyright (C) 2021-2023 TeamArank
+# This file is a part of < https://github.com/CoderXKrishna/Arank/ >
+# PLease read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
 
-RUN apt update && apt upgrade -y
-RUN apt-get -y update
-RUN apt install git curl python3 python3-pip -y
-RUN pip3 install -U pip
-RUN mkdir /app/
-WORKDIR /app/
-COPY . /app/
-RUN pip3 install -U -r requirements.txt
-CMD python3 KanishkaSpam.py
+FROM theteamArank/Arank:main
+
+# set timezone
+ENV TZ=Asia/Kolkata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+COPY installer.sh .
+
+RUN bash installer.sh
+
+# changing workdir
+WORKDIR "/root/TeamArank"
+
+# start the bot.
+CMD ["bash", "startup"]
