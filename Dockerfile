@@ -3,7 +3,7 @@
 # This file is a part of < https://github.com/CoderXKrishna/Arank/ >
 # PLease read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
 
-FROM coderxkrishna/arank:main
+FROM theteamultroid/ultroid:main
 
 # set timezone
 ENV TZ=Asia/Kolkata
@@ -14,7 +14,7 @@ COPY installer.sh .
 RUN bash installer.sh
 
 # changing workdir
-WORKDIR "/root/coderxkrishna?"
+WORKDIR "/root/TeamUltroid"
 
 # start the bot.
 CMD ["bash", "startup"]
