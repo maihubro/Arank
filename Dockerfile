@@ -3,7 +3,7 @@
 # This file is a part of < https://github.com/CoderXKrishna/Arank/ >
 # PLease read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
 
-FROM theteamarank/arank:main
+FROM CoderXKrishna/Arank:main
 
 # set timezone
 ENV TZ=Asia/Kolkata
