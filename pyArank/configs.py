@@ -27,7 +27,7 @@ class Var:
         if len(sys.argv) > 2
         else config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
     )
-    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
+    SESSION = "1BJWap1wBu2HtBIqUi8zD04CqP50QO4vf5-Zy5krlkYHj8YZAQy4ePf2hIkTQNX3qDeNbFRGDCwSCo0LCK4Ddoc1lSfoJAru4XfUM78dc3aSVn-TDyVQY5MOvFYQpY1NEaDzYxdoE997bRbjbSlymrh1rWT9oSkQumZV7AceGzs-drvAu1udwKOHWboJUoMA7Qm_LvlKwIqpRFWpGhO17RksD9wmdFfbvlNtFP41H2mCD7j-78bR91qZd04cmbtrYG9GhqswXVwSWmhBOdQV7HAwVQvj1d3Pmzz6-vO8vUoS4w0iBVlA3r4QDBABAOUEswACk9pi6bH-BO06iV5nAndkEDvbj_uY="
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
