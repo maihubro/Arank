@@ -19,4 +19,5 @@ WORKDIR "/root/CoderXKrishna"
 RUN pip install gunicorn flask
 
 # start the bot.
-CMD ["bash", "startup"]
+
+CMD bash runfile.sh
