@@ -2,18 +2,37 @@
 # Arank - UserBot
 # Copyright (C) 2021-2023 TeamArank
 #
-# This file is a part of < https://github.com/CoderXKrishna/Arank/ >
-# PLease read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
+# This file is a part of <https://github.com/CoderXKrishna/Arank/>
+# Please read the GNU Affero General Public License in <https://github.com/CoderXKrishna/Arank/blob/main/LICENSE/>.
 
-
-echo "
+# Function to display the Arank ASCII art
+display_ascii_art() {
+    cat << "EOF"
     / \   _ __ __ _ _ __ | | __
    / _ \ | '__/ _` | '_ \| |/ /
   / ___ \| | | (_| | | | |   < 
  /_/   \_\_|  \__,_|_| |_|_|\_\
 
 Visit @Carding_Chronicle for updates!!
+EOF
+}
 
-"
-if [ -f .env ] ; then  set -o allexport; source .env; set +o allexport ; fi
-if [ $SESSION1 ] ; then wget https://gist.github.com/1Danish-00/6554f034549197e5824972b01f631e0c/raw/main.py && python3 main.py ; else python3 -m pyArank ; fi
+# Display ASCII art
+display_ascii_art
+
+# Check if .env file exists and load environment variables
+if [ -f .env ]; then
+    set -o allexport
+    source .env
+    set +o allexport
+fi
+
+# Check if SESSION1 variable is set
+if [ -n "$SESSION1" ]; then
+    # Download and execute main.py if SESSION1 is set
+    wget -O main.py https://gist.github.com/1Danish-00/6554f034549197e5824972b01f631e0c/raw/main.py
+    python3 main.py
+else
+    # Run pyArank if SESSION1 is not set
+    python3 -m pyArank
+fi
